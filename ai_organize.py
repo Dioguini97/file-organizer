@@ -13,7 +13,8 @@ FILE_CATEGORIES = {
     "Música": [".mp3", ".wav", ".aac", ".flac"]
 }
 
-MAIN_PATH = Path('C:\\Users\diogo')
+MAIN_PATH = Path('C:\\Users\diogo\Documents')
+
 
 def extract_content(file_path: Path):
     suffix = file_path.suffix.lower()
@@ -46,7 +47,6 @@ def extract_content(file_path: Path):
         print(f'Erro: Não foi possivel ler o conteudo do file {file_path}\n {e}')
 
 
-
 def organize_files(folder_path: str):
     folder = Path(folder_path)
 
@@ -63,13 +63,13 @@ def organize_files(folder_path: str):
             category_folder.mkdir(exist_ok=True)
             shutil.move(str(item), str(category_folder / item.name))
             moved = True
-            break
         if not moved:
             others_folder = MAIN_PATH / 'Others'
             others_folder.mkdir(exist_ok=True)
             shutil.move(str(item), str(others_folder / item.name))
 
     print("Organização Concluida!")
+
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
