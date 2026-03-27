@@ -13,7 +13,7 @@ FILE_CATEGORIES = {
     "Música": [".mp3", ".wav", ".aac", ".flac"]
 }
 
-MAIN_PATH = Path('C:\\Users\diogo\Documents')
+MAIN_PATH = Path('C:\\Users\\diogo\\Documents')
 
 
 def extract_content(file_path: Path):
