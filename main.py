@@ -10,7 +10,7 @@ FILE_CATEGORIES = {
     "Música": [".mp3", ".wav", ".aac", ".flac"]
 }
 
-MAIN_PATH = Path('C:\\Users\diogo')
+MAIN_PATH = Path('C:\\Users\\diogo')
 
 def organize_files(folder_path: str):
     folder = Path(folder_path)
