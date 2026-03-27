@@ -59,11 +59,12 @@ def organize_files(folder_path: str):
         if item.is_file():
             text = extract_content(item)
             category = classify(text)
+            print(f'Ficheiro {item.name} classificado como {category}')
+            print('-----------------------------------------')
             category_folder = MAIN_PATH / category
             category_folder.mkdir(exist_ok=True)
             shutil.move(str(item), str(category_folder / item.name))
             moved = True
-            break
         if not moved:
             others_folder = MAIN_PATH / 'Others'
             others_folder.mkdir(exist_ok=True)
